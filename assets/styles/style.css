@@ -1,0 +1,94 @@
+body{
+	margin: 0px;
+	color: #ccc;
+	font-family: Roboto;
+}
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0px;
+	height: 33vh;
+	width: 100vw;
+}
+.container-full{
+	height: 100vh;
+	flex-direction: column;
+}
+.container-group{
+	margin: 0px;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;	
+}
+/*.container-circle-j-start-a-start{
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.container-circle-j-center-a-start{
+	justify-content: flex-center;
+	align-items: flex-start;
+}
+.container-circle-j-end-a-start{
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+.container-circle-j-start-a-center{
+	justify-content: start;
+	align-items: center;
+}
+.container-circle-j-center-a-center{
+	justify-content: center;
+	align-items: center;
+}
+.container-circle-j-center-a-center{
+	justify-content: center;
+	align-items: center;
+}*/
+.title{
+	font-size: 8rem;
+	margin: 0.25rem;
+}
+.subtitle{
+	font-size: 5rem;
+	margin: 0.25rem;
+}
+.instruction{
+	width: 80%;
+	font-size: 5rem;
+	margin: 0.25rem;
+	display: flex;
+	flex-direction: column;
+}
+.instruction-item{
+	align-items: flex-end;
+}
+.icon{
+	font-size: 5rem;
+}
+.icon-green{
+	color: green;
+}
+.icon-red{
+	color: red;
+}
+.icon-yellow{
+	color: yellow;
+}
+.circle{
+	display: flex;
+	height: 10rem;
+	width: 10rem;
+	border-radius: 50%;
+	background-color: #ccc;
+}
+.circle-green{
+	background-color: green;
+}
+.circle-red{
+	background-color: red;
+}
+.circle-yellow{
+	background-color: yellow;
+}
