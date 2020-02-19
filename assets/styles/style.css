@@ -1,7 +1,7 @@
 body{
 	margin: 0px;
 	color: #ccc;
-	font-family: Roboto;
+	font-family: Verdana;
 }
 .container{
 	display: flex;
@@ -24,11 +24,13 @@ body{
 }
 .title{
 	font-size: 2rem;
-	padding: 0.1rem;
+	padding: 0.2rem;
+	margin: 0;
 }
 .subtitle{
 	font-size: 1.5rem;
-	padding: 0.1rem;
+	padding: 0.2rem;
+	margin: 0;
 }
 .instruction{
 	width: 80%;
@@ -70,6 +72,25 @@ body{
 }
 .circle-yellow{
 	background-color: yellow;
+}
+
+.card-container{
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+.card-message{
+	padding: 0.5rem;
+	display: none;
+	position: fixed;
+	width: 25%;
+	background: #ccc;
+	color: white;
+	border-radius: 5%;
+}
+#card-btn{
+	border-radius: 5%;
+	float: left;
 }
 /*
 	body{
