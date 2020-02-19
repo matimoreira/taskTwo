@@ -52,6 +52,9 @@ body{
 .icon-yellow{
 	color: yellow;
 }
+.icon-blue{
+	color: blue;
+}
 .circle{
 	display: flex;
 	height: 1.5rem;

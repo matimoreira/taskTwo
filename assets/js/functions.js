@@ -3,7 +3,16 @@
 }*/
 setInterval('getPosition()',500);
 
+document.getElementsByClassName('circle-green')[0].addEventListener('click', clickGreen);
+document.getElementsByClassName('circle-red')[0].addEventListener('click', clickRed);
+document.getElementsByClassName('circle-yellow')[0].addEventListener('click', clickYellow);
+
+var clicks = [];
+var mayor = [0, 0, 1, 2, 0, 1, 0, 2];
+var menor = [1, 2, 0, 1, 2, 0, 2, 1];
+
 function getPosition(){
+
 	var containerGroup = document.getElementById("container-group");
 	var positions = ["flex-start", "flex-end", "center"];
 	// var containerGroup = document.getElementById("container-group").children;
@@ -20,13 +29,13 @@ function changePosition(element, justifyContent, alignItems) {
 	element.style.alignItems = alignItems;
 }
 function clickGreen() {
-	console.log("Hiciste click en el boton verde");
+	clicks.push(0);
 }
 function clickRed() {
-	console.log("Hiciste click en el boton rojo");
+	clicks.push(1);
 }
 function clickYellow() {
-	console.log("Hiciste click en el boton amarillo");
+	clicks.push(2);
 }
 
 // Retorna un entero aleatorio entre min (incluido) y max (excluido)
