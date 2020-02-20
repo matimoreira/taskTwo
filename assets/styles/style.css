@@ -8,7 +8,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	margin: 0px;
-	height: 33vh;
+	height: 30vh;
 	width: 100%;
 }
 .container-full{
@@ -17,24 +17,33 @@ body{
 }
 .container-group{
 	margin: 0px;
-	height: 100vh;
+	height: 90vh;
 	width: 100%;
 	display: flex;
 	flex-direction: column;	
+	justify-content: flex-end;
 }
+.container-circle{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 10vh;
+	margin: 0;
+}
+
 .title{
-	font-size: 2rem;
+	font-size: 7rem;
 	padding: 0.2rem;
 	margin: 0;
 }
 .subtitle{
-	font-size: 1.5rem;
+	font-size: 5rem;
 	padding: 0.2rem;
 	margin: 0;
 }
 .instruction{
 	width: 80%;
-	font-size: 1.5rem;
+	font-size: 4rem;
 	padding: 0.1rem;
 	display: flex;
 	flex-direction: column;
@@ -43,7 +52,7 @@ body{
 	align-items: flex-end;
 }
 .icon{
-	font-size: 1.5rem;
+	font-size: 4rem;
 }
 .icon-green{
 	color: green;
@@ -59,8 +68,8 @@ body{
 }
 .circle{
 	display: flex;
-	height: 1.5rem;
-	width: 1.5rem;
+	height: 6rem;
+	width: 6rem;
 	border-radius: 50%;
 	background-color: #ccc;
 }
@@ -77,20 +86,24 @@ body{
 .card-container{
 	width: 100%;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
+	margin-top: 1rem;
 }
 .card-message{
-	padding: 0.5rem;
+	padding: 3rem;
+	font-size: 3rem;
 	display: none;
 	position: fixed;
-	width: 25%;
+	width: 80%;
 	background: #ccc;
 	color: white;
-	border-radius: 5%;
+	border-radius: 1rem;
 }
-#card-btn{
-	border-radius: 5%;
-	float: left;
+.card-primary{
+	background-color: #007bff;
+}
+.card-danger{
+	background-color: #dc3545;
 }
 /*
 	body{

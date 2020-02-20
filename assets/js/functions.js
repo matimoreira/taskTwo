@@ -1,7 +1,7 @@
 /*document.getElementsByClassName("circle-green").onclick = function() {
 	console.log("Hiciste click en el boton verde");
 }*/
-setInterval('getPosition()',500);
+setInterval('getPosition()',700);
 
 document.getElementsByClassName('circle-green')[0].addEventListener('click', clickGreen);
 document.getElementsByClassName('circle-red')[0].addEventListener('click', clickRed);
@@ -14,10 +14,12 @@ var mayor = [0, 0, 1, 2, 0, 1, 0, 2];
 
 var menor = [1, 2, 0, 1, 2, 0, 2, 1];
 
+var positions = ["flex-start", "flex-end", "center"];
+
+
 function getPosition(){
 
 	var containerGroup = document.getElementById("container-group");
-	var positions = ["flex-start", "flex-end", "center"];
 
 	for (var i = 0; i < containerGroup.childElementCount; i++) {
 
@@ -30,56 +32,109 @@ function getPosition(){
 
 }
 
+
 function changePosition(element, justifyContent, alignItems) {
+
 	element.style.justifyContent = justifyContent;
 	element.style.alignItems = alignItems;
+
 }
 
 function clickGreen() {
+
 	clicks.push(0);
+	addCircle('green');
+
 }
+
 
 function clickRed() {
+
 	clicks.push(1);
+	addCircle('red');
+
 }
+
 
 function clickYellow() {
+
 	clicks.push(2);
+	addCircle('yellow');
+
 }
 
+
 function confirmInput() {
-	showCard('Se ha registrado un click', 'Lorem ipsum dolor sit amet, consectetur adipisicing.', 'secodary');
 	
-	if (clicks.toString() == mayor.toString()) {
-		console.log("mayor");
+	if (clicks.toString().localeCompare(mayor.toString()) == 0) {
+
+		
+		showCard('Mayor', 'Has predicho que el proximo numero sera mayor', 'card-primary');
+		console.log("mayor");	
 	
-	}else if (clicks.toString() == menor.toString()) {
-	
+	}else if (clicks.toString().localeCompare(menor.toString()) == 0) {
+
+		showCard('Menor', 'Has predicho que el proximo numero sera menor', 'card-primary');
 		console.log("menor");
 	
 	}else{
+
+		showCard('Error', 'Has tenido un error, mejora ese aim!', 'card-danger');
 		console.log("Te equivocaste men");
+	
 	}
+	resetContainerCircle();
 }
+
 
 //funcion auxiliar para ahorrarme repetir codigo
 function showCard(textTitle, textMessage, type) {
+
 	var card = document.getElementById('card');
 	var titulo = document.getElementById('card-title')
 	var mensaje = document.getElementById('card-message');
-	card.style.display = 'block';
+
+	
+	card.classList.remove('card-danger');
+	card.classList.remove('card-primary');
+	card.classList.add(type);
+
 	titulo.innerHTML = textTitle;
 	mensaje.innerHTML = textMessage;
+
+	card.style.display = 'block';
 	card.style.opacity = 1;
-	fade(card);
+	fade();
 }
+
+
+function addCircle(color) {
+	var container = document.getElementById('container-circle');
+	container.innerHTML += "<span class=\"icon icon-"+ color +"\"><i class=\"fas fa-circle\"></i></span>";
+}
+
+
+function resetContainerCircle() {
+	var container = document.getElementById('container-circle');
+	container.innerHTML = "";
+	clicks = [];
+}
+
+
 
 // Retorna un entero aleatorio entre min (incluido) y max (excluido)
 function getRandomInt(min, max) {
 	return Math.floor(Math.random() * (max - min)) + min;
 }
+
+
 //Una genialidad que encontre por ahi 
 //funcion recursiva para desvanecer un elemento en base a ir disminuyendo la opacidad 
-function fade(element){
-	(element.style.opacity-=.1)<0?element.style.display="none":setTimeout(fade,40);
+function fade(){
+
+	var card = document.getElementById('card');
+	(card.style.opacity-=.025)<0?card.style.display="none":setTimeout(fade,100);
+
+	// (element.style.opacity-=.1)<0?element.style.display="none":setTimeout(fade,40); Por alguna razon no me funciona con parametro >(
+
 }
