@@ -8,13 +8,22 @@ document.getElementsByClassName('circle-red')[0].addEventListener('click', click
 document.getElementsByClassName('circle-yellow')[0].addEventListener('click', clickYellow);
 document.getElementById('confirm').addEventListener('click', confirmInput);
 
+
 var clicks = [];
 
 var mayor = [0, 0, 1, 2, 0, 1, 0, 2];
 
 var menor = [1, 2, 0, 1, 2, 0, 2, 1];
 
+var resultado = [1, 1, 1, 2, 0, 2, 2, 2];
+
 var positions = ["flex-start", "flex-end", "center"];
+
+var number = getRandomInt(1, 101);
+
+
+document.getElementById('number'). innerHTML = number;
+
 
 
 function getPosition(){
@@ -77,7 +86,13 @@ function confirmInput() {
 		showCard('Menor', 'Has predicho que el proximo numero sera menor', 'card-primary');
 		console.log("menor");
 	
-	}else{
+	}else if(clicks.toString().localeCompare(resultado.toString()) == 0){
+
+		showCard('resultado', 'El otro numero es '+ getRandomInt(1, 101) + ', fijate vos si ganaste o perdiste... MANEJATE!', 'card-primary');
+		console.log("menor");
+
+	}
+	else{
 
 		showCard('Error', 'Has tenido un error, mejora ese aim!', 'card-danger');
 		console.log("Te equivocaste men");
