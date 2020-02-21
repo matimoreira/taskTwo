@@ -79,17 +79,17 @@ function confirmInput() {
 	if (clicks.toString().localeCompare(mayor.toString()) == 0) {
 
 		
-		showCard('Mayor', 'Has predicho que el proximo numero sera mayor', 'card-primary');
+		showCard('Mayor', 'Ha predicho que el proximo numero sera mayor', 'card-primary');
 		console.log("mayor");	
 	
 	}else if (clicks.toString().localeCompare(menor.toString()) == 0) {
 
-		showCard('Menor', 'Has predicho que el proximo numero sera menor', 'card-primary');
+		showCard('Menor', 'Ha predicho que el proximo numero sera menor', 'card-primary');
 		console.log("menor");
 	
 	}else if(clicks.toString().localeCompare(resultado.toString()) == 0){
 
-		showCard('resultado', 'El otro numero es '+ getRandomInt(1, 101) + ', fijate vos si ganaste o perdiste...', 'card-primary');
+		showCard('resultado', 'El otro número es '+ getRandomInt(1, 101) + ', fijate vos si ganaste o perdiste...', 'card-primary');
 		numberElement.innerHTML = getRandomInt(1, 101);
 		console.log("menor");
 
@@ -110,6 +110,7 @@ function showCard(textTitle, textMessage, type) {
 	var card = document.getElementById('card');
 	var titulo = document.getElementById('card-title')
 	var mensaje = document.getElementById('card-message');
+	var image = document.getElementById('card-image');
 
 	
 	card.classList.remove('card-danger');
@@ -118,8 +119,9 @@ function showCard(textTitle, textMessage, type) {
 
 	titulo.innerHTML = textTitle;
 	mensaje.innerHTML = textMessage;
+	image.setAttribute('src', 'assets/resource/img/jsturn.jpg');
 
-	card.style.display = 'block';
+	card.style.display = 'flex';
 	card.style.opacity = 1;
 	fade();
 }
@@ -150,7 +152,7 @@ function getRandomInt(min, max) {
 function fade(){
 
 	var card = document.getElementById('card');
-	(card.style.opacity-=.025)<0?card.style.display="none":setTimeout(fade,100);
+	(card.style.opacity-=.025)<0?card.style.display="none":setTimeout(fade,150);
 
 	// (element.style.opacity-=.1)<0?element.style.display="none":setTimeout(fade,40); Por alguna razon no me funciona con parametro >(
 

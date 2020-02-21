@@ -96,11 +96,19 @@ body{
 	padding: 1.5rem/*3rem*/;
 	font-size: 1.54rem/*3rem*/;
 	display: none;
+	justify-content: space-around;
+	align-items: center;
 	position: fixed;
 	width: 80%;
 	background: #ccc;
 	color: white;
 	border-radius: 1rem;
+}
+.card-image{
+	width: 8rem;
+	height: 8rem;
+	object-fit: scale-down;
+	/*display: none;*/
 }
 .card-primary{
 	background-color: #007bff;
