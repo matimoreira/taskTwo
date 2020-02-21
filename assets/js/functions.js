@@ -21,8 +21,9 @@ var positions = ["flex-start", "flex-end", "center"];
 
 var number = getRandomInt(1, 101);
 
+var numberElement = document.getElementById('number');
 
-document.getElementById('number'). innerHTML = number;
+numberElement.innerHTML = number;
 
 
 
@@ -88,7 +89,8 @@ function confirmInput() {
 	
 	}else if(clicks.toString().localeCompare(resultado.toString()) == 0){
 
-		showCard('resultado', 'El otro numero es '+ getRandomInt(1, 101) + ', fijate vos si ganaste o perdiste... MANEJATE!', 'card-primary');
+		showCard('resultado', 'El otro numero es '+ getRandomInt(1, 101) + ', fijate vos si ganaste o perdiste...', 'card-primary');
+		numberElement.innerHTML = getRandomInt(1, 101);
 		console.log("menor");
 
 	}

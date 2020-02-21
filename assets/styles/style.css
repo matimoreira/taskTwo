@@ -1,3 +1,6 @@
+html{
+	scroll-behavior: smooth;
+}
 body{
 	margin: 0px;
 	color: #ccc;
@@ -32,18 +35,18 @@ body{
 }
 
 .title{
-	font-size: 7rem;
+	font-size: 3rem/*7rem*/;
 	padding: 0.2rem;
 	margin: 0;
 }
 .subtitle{
-	font-size: 5rem;
+	font-size: 2.5rem/*5rem*/;
 	padding: 0.2rem;
 	margin: 0;
 }
 .instruction{
 	width: 80%;
-	font-size: 4rem;
+	font-size: 2rem/*4rem*/;
 	padding: 0.1rem;
 	display: flex;
 	flex-direction: column;
@@ -52,7 +55,7 @@ body{
 	align-items: flex-end;
 }
 .icon{
-	font-size: 4rem;
+	font-size: 2rem/*4rem*/;
 }
 .icon-green{
 	color: green;
@@ -68,8 +71,8 @@ body{
 }
 .circle{
 	display: flex;
-	height: 6rem;
-	width: 6rem;
+	height: 3rem/*6rem*/;
+	width: 3rem/*6rem*/;
 	border-radius: 50%;
 	background-color: #ccc;
 }
@@ -90,8 +93,8 @@ body{
 	margin-top: 1rem;
 }
 .card-message{
-	padding: 3rem;
-	font-size: 3rem;
+	padding: 1.5rem/*3rem*/;
+	font-size: 1.54rem/*3rem*/;
 	display: none;
 	position: fixed;
 	width: 80%;
@@ -181,43 +184,69 @@ body{
    ------------------------------------------------------------------------- */
 @media (min-width: 768px) { 
 	
+	.title{
+		font-size: 2rem;
+	}
+	.subtitle{
+		font-size: 1.5rem;
+	}
+	.instruction{
+		font-size: 1.5rem;
+	}
+	.icon{
+		font-size: 1.5rem;
+	}
+	.card-container{
+		flex-direction: column;
+	}
+	.circle{
+		height: 3rem;
+		width: 3rem;
+	}
+	.card-container{
+		justify-content: flex-end;
+	}
+	.card-message{
+		padding: 1rem;
+		font-size: 1rem;
+		width: 50%;
+		margin-left: -1rem;
+	}
 }
  
 /* Tablets en horizonal y escritorios normales
    ------------------------------------------------------------------------- */
 @media (min-width: 1024px) {
-
+	.title{
+		font-size: 3.5rem;
+	}
+	.subtitle{
+		font-size: 2.5rem;
+	}
+	.instruction{
+		font-size: 2rem;
+	}
+	.icon{
+		font-size: 2rem;
+	}
+	.circle{
+		height: 4rem;
+		width: 4rem;
+	}
+	.card-container{
+		justify-content: flex-start;
+		align-items: flex-end;
+	}
+	.card-message{
+		padding: 1rem;
+		font-size: 1rem;
+		width: 25%;
+		margin-left: -1rem;
+	}
 }
  
 /* Escritorios muy anchos
    ------------------------------------------------------------------------- */
 @media (min-width: 1200px) {
-
+	/* body ... */
 }
-
-/*
-	.container-circle-j-start-a-start{
-		justify-content: flex-start;
-		align-items: flex-start;
-	}
-	.container-circle-j-center-a-start{
-		justify-content: flex-center;
-		align-items: flex-start;
-	}
-	.container-circle-j-end-a-start{
-		justify-content: flex-end;
-		align-items: flex-start;
-	}
-	.container-circle-j-start-a-center{
-		justify-content: start;
-		align-items: center;
-	}
-	.container-circle-j-center-a-center{
-		justify-content: center;
-		align-items: center;
-	}
-	.container-circle-j-center-a-center{
-		justify-content: center;
-		align-items: center;
-	}
-*/
